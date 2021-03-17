@@ -3,5 +3,6 @@
 .vscode 
 .hypothesis 
 .pytest_cache
+__pycache__/
 env/
 nstructions/
