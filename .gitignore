@@ -3,6 +3,7 @@
 .vscode 
 .hypothesis 
 .pytest_cache
+.joblib
 __pycache__/
 env/
 nstructions/
