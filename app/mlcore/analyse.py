@@ -1,6 +1,7 @@
 import os
 from joblib import load
 import pandas as pd 
+import numpy as np
 
 clf = load('app/mlcore/logistic_cls.joblib')
 vec = load('app/mlcore/logistic_vec.joblib')
@@ -14,6 +15,7 @@ def sentiment_analyzer(tweet):
     #     return 'neutral'
     
     sample_tweet = pd.Series(tweet)
+    # sample_tweet = np.array(tweet)
     sample_tweet = vec.transform(sample_tweet)
     result = clf.predict(sample_tweet)
 
