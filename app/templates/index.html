@@ -1,2 +1,55 @@
-<h1>Hi {{ name }}</h1>
-<p> this is a test index page</p>
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="text-gray-600 body-font">
+        <form action='/' role='submit'>
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Classify Sentiment of Tweets </h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Please write a tweet to classify by using The Natural Language Processing Machine Learning algorithm. </p>
+            </div>
+            <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+            
+                <div class="relative flex-grow w-full">
+                    <label for="full-name" class="leading-7 text-sm text-gray-600">Tweet</label>
+                    <input type="text" id="tweet" name="tweet" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-transparent focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+    
+                <button class="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Classify</button>
+            
+            </div>
+
+            {% if result %}
+                <div>
+                    {%if result == 'positive' %}
+                        <img class='imgsent' src='https://raw.githubusercontent.com/tamal2000/blog/a90845b273cc77c1e290c312502b3cafc70aaf64/happy.png'>
+                    {% endif %}
+                    {%if result == 'neutral' %}
+                        <img class='imgsent' src='https://github.com/tamal2000/blog/blob/a90845b273cc77c1e290c312502b3cafc70aaf64/neutral.png?raw=true'>
+                    {% endif %}
+                    {%if result == 'negative' %}
+                        <img class='imgsent' src='https://github.com/tamal2000/blog/blob/a90845b273cc77c1e290c312502b3cafc70aaf64/angry.png?raw=true'>
+                    {% endif %}
+
+                </div>
+
+                <div id='res'>
+                    <div class="container px-5 py-24">
+                            <div class="text-center mb-20">
+                    <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4 {{result}}">Sentiment Class: {{ result }}</h1>
+                    <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">Tweet:{{tweet}}</p>
+                    </div>
+                        </div>
+                </div>
+            {% endif %}
+        </div>
+        
+        </form>
+
+       
+
+        
+
+
+    </section>
+{% endblock %}

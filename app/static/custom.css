@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1; /* Or flex-grow: 1;*/
+  }
+
+
+.imgsent{
+    width: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10ex;
+
+}
+
+.neutral{
+    color:orange;
+}
+.negative{
+    color:red;
+}
+.positive{
+    color:green;
+}

@@ -1,15 +1,20 @@
 import os, sys
 from app import app 
-from flask import render_template, jsonify
+from flask import render_template, jsonify, request
 from .mlcore import *
 
-@app.route('/')
+@app.route('/',methods=['GET','POST'])
 def index():
-    return render_template('index.html')
+    tweet = request.args.get('tweet')
+    if tweet:
+        result = sentiment_analyzer(tweet)
+        return render_template('index.html', result=result, tweet=tweet)
+    else: 
+        return render_template('index.html')
 
-@app.route('/<name>')
-def index_with_name(name):
-    return render_template('index.html',name=name)
+@app.route('/api')
+def index_with_name():
+    return render_template('api.html')
 
 @app.route('/analyze/<string:tweet>')
 def tweet_analyzer(tweet):
