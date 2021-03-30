@@ -16,8 +16,8 @@ def index():
 def index_with_name():
     return render_template('api.html')
 
-@app.route('/analyze/<string:tweet>')
-def tweet_analyzer(tweet):
+@app.route('/analyse/<string:tweet>')
+def tweet_analyser(tweet):
     result = sentiment_analyzer(tweet)
     return jsonify(result=result)
 

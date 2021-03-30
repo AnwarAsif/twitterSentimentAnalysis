@@ -4,7 +4,7 @@
     {% block head %}{% endblock %}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="./static/tailwind.min.css" rel="stylesheet">
   <link href='./static/custom.css' rel='stylesheet'>
   <!-- ... -->
 </head>
@@ -14,16 +14,15 @@
             <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
             <a class="mr-5 hover:text-gray-900" href='/'>Home</a>
             <a class="mr-5 hover:text-gray-900" href='/api'>API Details</a>
-            <a class="mr-5 hover:text-gray-900" href='/doc'>Documentation</a>
             
             </nav>
-            <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+            <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0 " href='/'>
             <span class="ml-3 text-xl">Tweet</span> <span></span>
             <span class="ml-3 text-xl">
-                <img src='./static/comm.png'></img>
+                <img class='lg1' src='./static/comm.png'></img>
             </span> <span></span>
 
-            <span class="ml-3 text-xl">Classification</span>
+            <span class="ml-3 text-xl">Analyser</span>
             </a>
             <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
                 <a class="hover:text-gray-900" href="https://www.linkedin.com/in/anwarasif/">About Me</a>
@@ -37,7 +36,7 @@
 
             <div class="bg-gray-100">
                 <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                <p class="text-gray-500 text-sm text-center sm:text-left">© 2021 Tweet Classifer —
+                <p class="text-gray-500 text-sm text-center sm:text-left">© 2021 Tweet Analyser —
                     <a href="https://twitter.com/tamal2000" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@tamal2000</a>
                 </p>
                 <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
@@ -54,13 +53,6 @@
             </footer>
     </body>
     <body class='flex flex-col min-h-screen '> 
-        
-
-
-
-
-
-        
-
+          
     </body>
 </html>

@@ -10,7 +10,7 @@
   <div class="container px-5 py-24 mx-auto flex flex-wrap">
   <div class="flex flex-col text-center w-full mb-12">
       <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">API Documentation</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">The Tweet Sentiment Classification API returns Sentiment class of given tweet, like 'Natural','Positive', or 'Negative'. To use this API, please follow the blow instructions. 
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">The Tweet Analyser API returns sentiment class of a given tweet. Expected resutls are 'Natural','Positive', or 'Negative'. To use this API, please follow the below instructions. 
     </div>
     
     <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
@@ -22,9 +22,9 @@
         </div>
         <div class="flex-grow">
           <h2 class="text-gray-900 text-lg title-font font-medium mb-3">GET CLASS</h2>
-          <p class="leading-relaxed text-base">To get the sentiment class, a POST call to the following url :
-https://flasktwitter.herokuapp.com/analyze/</p>
-          <a class="mt-3 text-indigo-500 inline-flex items-center" href='https://flasktwitter.herokuapp.com/analyze/'>URL
+          <p class="leading-relaxed text-base">To get the sentiment class of a tweet, a POST call to the following url can be used:
+https://flasktwitter.herokuapp.com/analyse/</p>
+          <a class="mt-3 text-indigo-500 inline-flex items-center" href='https://flasktwitter.herokuapp.com/analyse/'>URL
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
@@ -41,16 +41,24 @@ https://flasktwitter.herokuapp.com/analyze/</p>
         </div>
         <div class="flex-grow">
           <h2 class="text-gray-900 text-lg title-font font-medium mb-3">QUERY PARAMETERS</h2>
-          <p class="leading-relaxed text-base"><B>Field:</b>tweet</p>
-          <p class="leading-relaxed text-base"><B>Type:</b>string</p>
-          <p class="leading-relaxed text-base"><B>Description:</b>(Mendatory)a sample tweet or free text</p>
+          <p class="leading-relaxed text-base"><B>Field:</b> tweet</p>
+          <p class="leading-relaxed text-base"><B>Type:</b> string</p>
+          <p class="leading-relaxed text-base"><B>Description:</b> a sample tweet or free text</p>
   
         </div>
       </div>
       <div class="flex flex-col mb-10 lg:items-start items-center">
        
-        <p class="leading-relaxed text-base"><B>Example:</b>https://flasktwitter.herokuapp.com/analyze/tweet=yearly%20revenue%20has%20increased</p>
+        <p class="leading-relaxed text-base"><B>Example:</b></p><a href='https://flasktwitter.herokuapp.com/analyse/tweet=profit decrease'>https://flasktwitter.herokuapp.com/analyse/tweet=profit decrease</a>
       </div>
+
+      <div class="flex-grow">
+          <h2 class="text-gray-900 text-lg title-font font-medium mb-3">RESPONSE PARAMETERS</h2>
+          <p class="leading-relaxed text-base"><B>key:</b> "results"</p>
+          <p class="leading-relaxed text-base"><B>values:</b> "neutral" or "positive" or "negative"</p>
+  
+        </div>
+
     </div>
 
 
@@ -71,7 +79,7 @@ https://flasktwitter.herokuapp.com/analyze/</p>
           </a>
         </div>
 
-      <img alt="feature" class="object-cover object-center h-full w-full" src="./static/api.png">
+      <img alt="feature" class="object-cover object-center h-full w-full apiimg" src="./static/api.png">
     </div>
   </div>
 </section>

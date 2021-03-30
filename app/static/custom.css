@@ -10,14 +10,13 @@ body {
 
 
 .imgsent{
-    width: 10%;
+    width: 110px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10ex;
-
+    margin-top: 5ex;
+    margin-bottom: 5ex;
 }
-
 .neutral{
     color:orange;
 }
@@ -26,4 +25,12 @@ body {
 }
 .positive{
     color:green;
+}
+.lg1{
+    width: 32px;
+    height: 32px;
+}
+
+.apiimg{
+    resize: 40%; 
 }
